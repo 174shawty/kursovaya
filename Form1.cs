@@ -8,23 +8,40 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using MySql.Data.MySqlClient;
+using MetroFramework;
+using MetroFramework.Forms;
+using MetroFramework.Interfaces;
 
 namespace kursovaya
 {
-    public partial class Form1 : Form
+    public partial class AuthForm : MetroFramework.Forms.MetroForm
     {
-        public Form1()
+        public AuthForm()
         {
             InitializeComponent();
         }
-        
 
         private void button1_Click(object sender, EventArgs e)
         {
-            con.Open();
-            MessageBox.Show("xd");
+            
+        }
 
-            con.Close();
+
+    private void button2_Click(object sender, EventArgs e)
+        {
+            if (Theme == MetroThemeStyle.Light)
+            {
+                Theme = MetroThemeStyle.Dark;
+                button1.Theme = MetroThemeStyle.Dark;
+                button2.Theme = MetroThemeStyle.Dark;
+            }
+            else
+            {
+                Theme = MetroThemeStyle.Light;
+                button1.Theme = MetroThemeStyle.Light;
+                button2.Theme = MetroThemeStyle.Light;
+            }
+            
         }
     }
 }
