@@ -23,7 +23,7 @@ namespace kursovaya
 
         private void button1_Click(object sender, EventArgs e)
         {
-            
+            DB db = new DB();
         }
 
 
@@ -31,7 +31,7 @@ namespace kursovaya
         {
             if (Theme == MetroThemeStyle.Light)
             {
-                Theme = MetroThemeStyle.Dark;
+                Theme = MetroThemeStyle.Dark; 
                 button1.Theme = MetroThemeStyle.Dark;
                 button2.Theme = MetroThemeStyle.Dark;
             }
